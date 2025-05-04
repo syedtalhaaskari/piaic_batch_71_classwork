@@ -1,13 +1,4 @@
-To run python code in terminal/cmd
-
-Run python command:
-
-    python <filename>.py
-    
-For example:
-python app.py
-
-[Visit this link](https://colab.research.google.com/drive/1LqRMqVAff7jR_Xha7arxwHkFdQL08xAu?usp=sharing#scrollTo=AUQNaJJxVrMF)
+Vist [Discord Forum Ticket](https://discord.com/channels/1360829074028630098/1363452110066159616) to know how to run a python program
 
 This branch contains class work of PIAIC batch 71
 
