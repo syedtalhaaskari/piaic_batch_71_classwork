@@ -42,4 +42,10 @@ pwd = "Password"
 def access_dashboard():
     print("Access Dashboard Called ")
 
-access_dashboard()
+# access_dashboard()
+
+# Exercise 4
+names = ["Hamzah", "Ali", "Arham"]
+
+for (i, name) in enumerate(names, 1):
+    print(f"{i}. {name}")
