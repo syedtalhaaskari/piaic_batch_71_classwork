@@ -51,5 +51,9 @@ names = ["Hamzah", "Ali", "Arham"]
 #     print(f"{i}. {name}")
 
 # Exercise 5
-for i in range(1, 101):
-    print(i)
+# for i in range(1, 101):
+#     print(i)
+
+# Exercise 6
+for i in range(1, 11):
+    print(f"2 * {i} = {2 * i}")
