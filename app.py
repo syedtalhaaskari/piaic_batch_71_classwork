@@ -47,5 +47,9 @@ def access_dashboard():
 # Exercise 4
 names = ["Hamzah", "Ali", "Arham"]
 
-for (i, name) in enumerate(names, 1):
-    print(f"{i}. {name}")
+# for (i, name) in enumerate(names, 1):
+#     print(f"{i}. {name}")
+
+# Exercise 5
+for i in range(1, 101):
+    print(i)
