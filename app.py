@@ -1,83 +1,51 @@
-# Exercise 1
+# # Set and Frozenset
 
-def fn2():
-    print("I am function 2")
+# frozen_set1 = frozenset({'a', 'b', 'c', 'a'})
 
-def fn1(func2):
-    print("I am function 1")
-    func2()
+# frozen_set2 = frozenset({'a', 'b', 'c', 'a'})
+# # frozen_set2 = frozen_set1
 
-# fn1(fn2)
+# normal_set = {1, 2, 3, frozen_set1, frozen_set2}
 
-# Exercise 2
-# def auth_checker(func1):
-#     def wrapper():
-#         print("Auth Checker Called")
-#         func1()
-    
-#     return wrapper
+# print(normal_set)
 
-# @auth_checker
-# def access_dashboard():
-#     print("Access Dashboard Called")
+# # Lambda Expression
 
-# access_dashboard("Talha")
+# num = (0 if 1 > 2 else (3 if 2 > 1 else 2))
 
-# Exercise 3
-def auth_checker_with_parameters(name, password):
-    def auth_checker(func1):
-        def wrapper():
-            print("Auth Checker Called")
-            if name == "Talha" and password == "Password":
-                return func1()
-            else:
-                print("Invalid")
-        return wrapper
-        
-    return auth_checker
+# print(num)
 
-username = "Talha"
-pwd = "Password"
-@auth_checker_with_parameters(username, pwd)
-def access_dashboard():
-    print("Access Dashboard Called ")
+# OOP
 
-# access_dashboard()
+class House:
+    address = ""
 
-# Exercise 4
-names = ["Hamzah", "Ali", "Arham"]
+    def __init__(self, address):
+        self.address = address
+        self.number_of_rooms = 4
+        self.number_of_doors = 2
 
-# for (i, name) in enumerate(names, 1):
-#     print(f"{i}. {name}")
 
-# Exercise 5
-# for i in range(1, 101):
-#     print(i)
+class House1:
+    address = ""
 
-# Exercise 6
-# for i in range(1, 11):
-#     print(f"2 * {i} = {2 * i}")
+    def __init__(self, address):
+        self.test = address
+        self.number_of_rooms = 4
+        self.number_of_doors = 2
 
-# Exercise 7
-import random
+class Apartment(House, House1):
+    def __init__(self, addr):
+        House.__init__(self, addr)
+        House1.__init__(self, addr)
 
-secret_number = random.randint(1, 100)
+h1 = Apartment("Teen Talwar")
 
-while True:
-    my_guess = int(input("\nGuess the number: "))
+print(h1.test)
 
-    if my_guess > secret_number + 20:
-        print("You Guessed Too High!")
-    elif my_guess > secret_number + 10:
-        print("You Guessed High!")
-    elif my_guess > secret_number:
-        print("You Guessed Little Bit High!")
-    elif my_guess + 20 < secret_number:
-        print("You Guessed Too Low!")
-    elif my_guess + 10 < secret_number:
-        print("You Guessed Low!")
-    elif my_guess < secret_number:
-        print("You Guessed Little Bit Low!")
-    else:
-        print("You Won!\n")
-        break
+print(h1.address)
+
+h2 = House("Gulshan")
+
+print(h2.address)
+
